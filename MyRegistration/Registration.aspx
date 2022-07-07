@@ -1,91 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="MyRegistration.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="Registration.aspx.cs" Inherits="MyRegistration.Registration" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <title></title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-        $(function () {
-            $("#txtDOB").datepicker({
-                showOn: 'button',
-                buttonImageOnly: true,
-                buttonImage: 'x_office_calendar.png',
-                changeMonth: true,
-                changeYear: true,
-                showAnim: 'slideDown',
-                duration: 'fast',
-                dateFormat: 'dd-mm-yy',
-                maxDate: '-18Y'
-            }).attr('readonly', 'readonly');
-            
-            $("#txtDOJ").datepicker({
-                showOn: 'button',
-                buttonImageOnly: true,
-                buttonImage: 'x_office_calendar.png',
-                changeMonth: true,
-                changeYear: true,
-                showAnim: 'slideDown',
-                duration: 'fast',
-                dateFormat: 'dd-mm-yy'
-            }).attr('readonly', 'readonly');
-
-            $("#txtSpouceDOB").datepicker({
-                showOn: 'button',
-                buttonImageOnly: true,
-                buttonImage: 'x_office_calendar.png',
-                changeMonth: true,
-                changeYear: true,
-                showAnim: 'slideDown',
-                duration: 'fast',
-                dateFormat: 'dd-mm-yy',
-                maxDate: '-18Y'
-
-            }).attr('readonly', 'readonly');
-            $(".datepicker").datepicker({
-                showOn: 'button',
-                buttonImageOnly: true,
-                buttonImage: 'x_office_calendar.png',
-                changeMonth: true,
-                changeYear: true,
-                showAnim: 'slideDown',
-                duration: 'fast',
-                dateFormat: 'dd-mm-yy',
-                maxDate: '-0'
-            }).attr('readonly', 'readonly');
-
-            $(".datepicker1").datepicker({
-                showOn: 'button',
-                buttonImageOnly: true,
-                buttonImage: 'x_office_calendar.png',
-                changeMonth: true,
-                changeYear: true,
-                showAnim: 'slideDown',
-                duration: 'fast',
-                dateFormat: 'dd-mm-yy',
-                maxDate: '-20Y'
-            }).attr('readonly', 'readonly');
-            
-            $('#cblChild input[type="checkbox"]').click(function (e) {
-                if ($("#cblChild").children().find('input[type="checkbox"]:checked').length > 2) {
-                    e.preventDefault();
-                    alert('Only 2 Child allowed');
-                }
-            });
-
-            $('#cblParent input[type="checkbox"]').click(function (e) {
-                if ($("#cblParent").children().find('input[type="checkbox"]:checked').length > 2) {
-                    e.preventDefault();
-                    alert('Only 2 Parents allowed');
-                }
-            });
-           
-        });
-    });
+    <title>My Registration</title>
+    <link href="Css/jquery-ui.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Css/Registration.css" rel="stylesheet" />
+    <script src="Scripts/Registration.js"></script>
+    <script>
         function PrintGridData() {
 
             var prtGrid = document.getElementById('<%=GridView1.ClientID %>');
@@ -99,192 +28,19 @@
         }
 
     </script>
-
-    <style type="text/css">
-        .city {
-                background: #C9D6FF;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-              }
-        .auto-style2 {
-            width: 100px;
-        }
-        .auto-style4 {
-            width: 223px;
-        }
-        .auto-style5 {
-            width: 358px;
-        }
-        .auto-style6 {
-            width: 210px;
-        }
-        .auto-style8 {
-            width: 271px;
-        }
-        .auto-style9 {
-            width: 300px;
-        }
-        .auto-style10 {
-            width: 400px;
-            height: 50px;
-        }
-        .auto-style12 {
-            width: 299px;
-            height: 50px;
-        }
-        .auto-style13 {
-            width: 271px;
-            height: 50px;
-        }
-        .auto-style14 {
-            width: 400px;
-            height: 50px;
-        }
-        .auto-style16 {
-            width: 300px;
-            height: 50px;
-        }
-        .auto-style17 {
-            width: 271px;
-            height: 50px;
-        }
-        .auto-style18 {
-            width: 400px;
-            height: 50px;
-        }
-        .auto-style19 {
-            width: 262px;
-            height: 50px;
-        }
-        .auto-style20 {
-            width: 299px;
-            height: 50px;
-        }
-        .auto-style21 {
-            width: 271px;
-            height:50px;
-        }
-        .auto-style22 {
-            width: 262px;
-        }
-        .auto-style23 {
-            width: 262px;
-            height: 50px;
-        }
-        .auto-style26 {
-            width: 300px;
-            height: 52px;
-        }
-        .auto-style27 {
-            width: 400px;
-            height: 52px;
-        }
-        .auto-style28 {
-            width: 262px;
-            height: 52px;
-        }
-        .auto-style29 {
-            width: 271px;
-            height: 52px;
-        }
-        .auto-style30 {
-            width: 400px;
-            height: 50px;
-        }
-        .auto-style32 {
-            width: 300px;
-            height: 50px;
-        }
-        .auto-style33 {
-            width: 262px;
-            height: 50px;
-        }
-        .auto-style39 {
-            width: 400px;
-            height: 43px;
-        }
-        .auto-style40 {
-            width: 262px;
-            height: 43px;
-        }
-        .auto-style41 {
-            width: 300px;
-            height: 43px;
-        }
-        .auto-style42 {
-            width: 271px;
-            height: 43px;
-        }
-        .auto-style43 {
-            width: 300px;
-            height: 28px;
-        }
-        .auto-style44 {
-            width: 200px;
-            height: 28px;
-        }
-        .auto-style56 {
-            height: 30px;
-        }
-        .auto-style58 {
-            width: 210px;
-            height: 31px;
-        }
-        .auto-style59 {
-            width: 223px;
-            height: 31px;
-        }
-        .auto-style60 {
-            width: 358px;
-            height: 31px;
-        }
-        .auto-style61 {
-            width: 280px;
-            height: 31px;
-        }
-        .auto-style64 {
-            width: 100px;
-            height: 24px;
-        }
-        .auto-style644 {
-            width: 400px;
-            height: 24px;
-        }
-        .auto-style65 {
-            width: 200px;
-            height: 24px;
-        }
-        .auto-style66 {
-            height: 25px;
-        }
-        .auto-style68 {
-            height: 21px;
-        }
-        .auto-style69 {
-            height: 224px;
-        }
-        .auto-style74 {
-            width: 300px;
-            height: 25px;
-        }
-        .auto-style77 {
-            width: 200px;
-            height: 25px;
-        }
-        .auto-style82 {
-            width: 200px;
-        }
-        </style>
-
     </head>
 <body>
+    
     <form id="form5" runat="server">
+       <div class="city1">
         <div style="border:2px solid black" >
+            <div style=" margin-left:auto;margin-right:auto; margin-bottom:10px; align-content:center; margin-top:30px">
+            <asp:Label ID="lblmobile" style='margin-left:100px' Text="" runat="server" /><asp:LinkButton ID="lbtnLogout" style='margin-left:800px' class="btn btn-default" runat="server" CausesValidation="False" OnClick="lbtnLogout_Click">Logout</asp:LinkButton> 
+            </div>
              
             <div >
                 
-                <table style="border:1px solid black; margin-left:auto;margin-right:auto;margin-top:60px">
+                <table style=" margin-left:auto;margin-right:auto; margin-bottom:10px;  margin-top:30px">
                     <tr>
                         <td align="center" colspan="3">
                             <asp:Label ID="Label30" runat="server" Visible="false"  Text="Registration ID :"></asp:Label><asp:Label ID="LblRegistrationID" runat="server"  Text=""></asp:Label>
@@ -292,13 +48,13 @@
                     </tr>
                         <tr >
                             <td>
-                                <asp:Button ID="btnMyInfo" runat="server"  Text="Step 1 :  My Information" OnClick="btnMyInfo_Click" CausesValidation="False" />
+                                <asp:Button ID="btnMyInfo" style="margin-right:20px; margin-left:20px" class="btn btn-default" runat="server"  Text="Step 1 :  My Information" OnClick="btnMyInfo_Click" CausesValidation="False" />
                             </td>
                             <td>
-                                <asp:Button ID="btnDepInfo" runat="server" Text="Step 2 :  Dependent Information" OnClick="btnDepInfo_Click" CausesValidation="False" />
+                                <asp:Button ID="btnDepInfo" style='margin-right:20px' class="btn btn-default" runat="server" Text="Step 2 :  Dependent Information" OnClick="btnDepInfo_Click" CausesValidation="False" />
                             </td>
                             <td>
-                                <asp:Button ID="btnFinalize" runat="server" Text="Step 3 :  Finalization" OnClick="btnFinal_Click" CausesValidation="False" />
+                                <asp:Button ID="btnFinalize" style='margin-right:20px' class="btn btn-default" runat="server" Text="Step 3 :  Finalization" OnClick="btnFinal_Click" CausesValidation="False" />
                             </td>
                         </tr>
                     
@@ -310,7 +66,7 @@
             <asp:MultiView ID="MvRegistration" runat="server">
                 <asp:View ID="ViewMyInformation" runat="server">
 
-                  <div style="padding-top:10px; padding-bottom:10px" >
+                  <div style="padding-top:10px; padding-bottom:200px" >
                       <table class="city" style="margin-left:auto;margin-right:auto;">
                           <tr>
                               <td class="auto-style39">
@@ -328,7 +84,7 @@
                           </tr>
                           <tr>
                               <td style="width:400px;" align= "right">
-                                  <asp:Label ID="Label4" runat="server" Text="Name :"></asp:Label>
+                                  <asp:Label ID="Label4"  runat="server" Text="Name :"></asp:Label>
                               </td>
                               <td class="auto-style22">
                                   <asp:TextBox ID="txtFirstName" Width="250px"  runat="server"></asp:TextBox>   
@@ -461,8 +217,8 @@
                                   
                               </td>
                               <td class="auto-style33">
-                                  <asp:Button style='margin-right:20px' ID="btnSaveNext1" runat="server" Text="Save & Next" OnClick="btnSaveNext1_Click" />
-                                  <asp:Button ID="btnClear1"  runat="server" Text="Clear" CausesValidation="False" OnClick="btnClear1_Click" />
+                                  <asp:Button style='margin-right:20px' class="btn btn-primary" ID="btnSaveNext1"  runat="server" Text="Save & Next" OnClick="btnSaveNext1_Click" />
+                                  <asp:Button ID="btnClear1" class="btn btn-warning"  runat="server" Text="Clear" CausesValidation="False" OnClick="btnClear1_Click" />
                               </td>
                                <td class="auto-style32">
                                    <asp:Label ID="lblSuccessfull" runat="server" Text=""></asp:Label>
@@ -517,7 +273,7 @@
                                    <asp:RequiredFieldValidator ID="rfvSpouseName" ControlToValidate="txtSpouceName" ForeColor="Red" runat="server" ErrorMessage="Spouse Name Required"></asp:RequiredFieldValidator>  <br/>
                                     
                                </td>
-                               <td class="auto-style82">
+                               <td class="auto-style645">
                                   <asp:RequiredFieldValidator ID="rfvSpouseDOB" ControlToValidate="txtSpouceDOB" ForeColor="Red" runat="server" ErrorMessage="Spouse DOB Required"></asp:RequiredFieldValidator>
                                </td>
                                <td class="auto-style9">
@@ -531,7 +287,7 @@
                                <td class="auto-style9">
                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtSpouceName"  runat="server" ForeColor="Red" ValidationExpression="[a-zA-Z ]*$"  ErrorMessage="Spouce Name Must be In Alphabets"></asp:RegularExpressionValidator>
                                </td>
-                               <td>
+                               <td class="auto-style645">
 
                                </td>
                            </tr>
@@ -594,7 +350,7 @@
                                        </tr>
                                    </table>
                                </td>
-                               <td>
+                               <td class="auto-style646">
                                    <table  style="height:200px">
 
                                        <tr>
@@ -860,8 +616,8 @@
                             <tr>
                                 
                                 <td class="auto-style68">
-                                    <asp:Button  ID="btnSaveNext2" runat="server" Text="Save & Next" OnClick="btnSaveNext2_Click" />
-                                  <asp:Button ID="btnClear2" style='margin-left:20px'  runat="server" Text="Clear" OnClick="btnClear2_Click" CausesValidation="False" />
+                                    <asp:Button  ID="btnSaveNext2" class="btn btn-primary" runat="server" Text="Save & Next" OnClick="btnSaveNext2_Click" />
+                                  <asp:Button ID="btnClear2" style='margin-left:20px' class="btn btn-warning"  runat="server" Text="Clear" OnClick="btnClear2_Click" CausesValidation="False" />
                                 </td>
                                 
                             </tr>
@@ -873,49 +629,60 @@
                 </asp:View>
                 <asp:View ID="ViewFinalization" runat="server">
 
-                <div>
-                    <table style=" border:1px solid black; margin-left:auto;margin-right:auto;" >
+                <div  style="padding-top:10px; padding-bottom:600px">
+                    <table class="city" style=" border:1px solid black; margin-left:auto;margin-right:auto;" >
+                        
                         <tr>
-                            <th>
+                            <th style="width:50px"></th>
+                            <th  style="text-align:center">
                                 <asp:Label ID="Label26" runat="server" Text="Family Information"></asp:Label>
                             </th>
+                            <th style="width:50px"></th>
                         </tr> 
+
                         <tr>
+                            <td></td>
                             <td>
-                                <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
-                                    <AlternatingRowStyle BackColor="#F7F7F7" />
-                                    <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-                                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-                                    <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-                                    <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-                                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-                                    <SortedAscendingCellStyle BackColor="#F4F4FD" />
-                                    <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-                                    <SortedDescendingCellStyle BackColor="#D8D8F0" />
-                                    <SortedDescendingHeaderStyle BackColor="#3E3277" />
+                                <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+                                    <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+                                    <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="White" ForeColor="#330099" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+                                    <SortedAscendingCellStyle BackColor="#FEFCEB" />
+                                    <SortedAscendingHeaderStyle BackColor="#AF0101" />
+                                    <SortedDescendingCellStyle BackColor="#F6F0C0" />
+                                    <SortedDescendingHeaderStyle BackColor="#7E0000" />
                                 </asp:GridView>
                                 <br />
                             </td>
+                         <td></td>
                         </tr>
+
                         </table>
                     <table>
                         <tr>
                             <td >
-                                    <asp:Button style='margin-left:500px' ID="btnFinalizeblock" runat="server" Text="Finalize" OnClick="btnFinalizeblock_Click" />
+                                    <asp:Button style='margin-left:500px'  ID="btnFinalizeblock" runat="server" Text="Finalize" OnClick="btnFinalizeblock_Click" />
                                     <asp:Button ID="btnPrint" style='margin-left:400px' OnClientClick="PrintGridData()" runat="server" Text="Print" />
                              </td>
                         </tr>
                         <tr >
-                            <td align="Center"><asp:Label ID="lblMessage" runat="server" ForeColor="Green" Text=""></asp:Label></td>
+                            <td  align="Center"><asp:Label ID="lblMessage" style='margin-left:500px'  runat="server" ForeColor="Green" Text=""></asp:Label></td>
                         </tr>
                     </table>
-                    
                  </div>  
                             
                 </asp:View>
             </asp:MultiView>
             
         </div>
+
+
+     </div>        
 </form>
+        
 </body>
+
 </html>
+
