@@ -33,7 +33,7 @@ namespace MyRegistration
 
             if (txtOTP.Text.ToString() == OTP.ToString())
             {
-                lblOPT.Text = "";
+                lblOPT.Text = ""; 
                 Session["User"] = txtMobile.Text.ToString().Trim();
                 
                 u.regiterMobile(txtMobile.Text.ToString().Trim());
