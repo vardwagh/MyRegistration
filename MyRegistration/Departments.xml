@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Departments>
+	<Department>
+		<DeptId>0</DeptId>
+		<DeptName>Please select</DeptName>
+	</Department>
+	<Department>
+		<DeptId>1</DeptId>
+		<DeptName>Administrator</DeptName>
+	</Department>
+	<Department>
+		<DeptId>2</DeptId>
+		<DeptName>Human Resource</DeptName>
+	</Department>
+	<Department>
+		<DeptId>3</DeptId>
+		<DeptName>Networking</DeptName>
+	</Department>
+		<Department>
+		<DeptId>4</DeptId>
+		<DeptName>Information Technology</DeptName>
+	</Department>
+	<Department>
+		<DeptId>5</DeptId>
+		<DeptName>Acount</DeptName>
+	</Department>
+
+
+</Departments>
